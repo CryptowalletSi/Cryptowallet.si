@@ -12,7 +12,7 @@
 - We dont have access to your coins, your seed backup or your private keys. 
 - Private keys can be retrieved from the backup seed (again write it down andstore it to a safe place). 
 
-### For support join our Telegram group https://t.me/joinchat/D32pHEojbV2orJhc0wBp8A
+### For support join our Telegram group https://t.me/CryptoWalletSi
 
 ### Responsibility of the security of your mobile device is yours alone.
 
