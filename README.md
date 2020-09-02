@@ -23,6 +23,7 @@
 - https://github.com/Nevacoin/nevacoin
 - https://github.com/AquariusNetwork/ARCO
 - https://github.com/NetkoCoin/netko
+- https://github.com/OC-CryptoCurrency
 
 ### Privacy policy https://cryptowallet.si/privacy.html
 
@@ -33,6 +34,7 @@
 - https://github.com/Taj-Coin/electrum-tajcoin-server
 - https://github.com/NetkoCoin/electrum-netko-server
 - https://github.com/Nevacoin/electrum-nevacoin-server
+- https://github.com/OC-CryptoCurrency/electrum-ocp-server
 
 ### BIP39 tool for private key extraction from backup seed words
 
