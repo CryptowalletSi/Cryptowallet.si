@@ -40,6 +40,8 @@
 
 - https://github.com/CryptowalletSi/bip39/archive/master.zip
 
+### Addition to the family Telegram on chain tiping bot https://github.com/CryptoBotDev/CryptoWalletSiBot
+
 ## Support development and addition of other cryptocurrencies and tokens
 
 - Bitcoin (BTC): 3Dho3s7SchiGuq27r37ZLodf8CSba7tX1d
