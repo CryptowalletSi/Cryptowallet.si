@@ -63,14 +63,21 @@
 	</string-array>
 
 	<string-array name="ocp_coin">
-		<item>Website: https://netko.tech</item>
-		<item>Forum: https://bitcointalk.org/index.php?topic=1810858</item>
-		<item>Twitter: https://twitter.com/netkocoin</item>
-		<item>Facebook: https://www.facebook.com/NetkoCoin/</item>
-		<item>Telegram: https://t.me/NetkoCoin</item>
-		<item>CoinmarketCap: https://coinmarketcap.com/currencies/netko/</item>
-		<item>Coinpaprika: https://coinpaprika.com/coin/netko-netko/</item>
-		<item>Blockexplorer: https://chainz.cryptoid.info/netko/</item>
+		<item>Website: https://ocprotocol.com</item>
+		<item>Website: https://ocprotocol.net</item>
+		<item>Website: https://ocprotocol.org</item>
+		<item>Website: https://ocp.cash</item>
+		<item>Website: https://ocp.digital</item>
+		<item>Forum: https://bitcointalk.org/index.php?topic=2313497</item>
+		<item>Twitter: https://twitter.com/OCP_Crypto</item>
+		<item>Facebook: https://www.facebook.com/OCP.OpenSourceCryptocurrency.OC/</item>
+		<item>Telegram: https://t.me/OCProtocol_OCP</item>
+		<item>CoinGecko: https://www.coingecko.com/en/coins/oc-protocol</item>
+		<item>Coinpaprika: https://coinpaprika.com/coin/ocp-oc-protocol/</item>
+		<item>Blockexplorer: https://chainz.cryptoid.info/ocp/</item>
+		<item>Reddit: https://reddit.com/r/OCProtocol</item>
+		<item>SourceCode: https://github.com/OC-CryptoCurrency</item>
+		<item>Discord: https://discord.gg/cVXQNz5</item>
 	</string-array>
 
 </resources>
