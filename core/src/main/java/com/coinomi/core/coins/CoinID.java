@@ -26,7 +26,8 @@ public enum CoinID {
     NETKO_MAIN(NetkoMain.get()),
     AQUARIUSCOIN_MAIN(AquariuscoinMain.get()),
     LANACOIN_MAIN(LanacoinMain.get()),
-    TAJCOIN_MAIN(TajcoinMain.get());
+    TAJCOIN_MAIN(TajcoinMain.get()),
+    OCPROTOCOL_MAIN(OCProtocolMain.get());
 
     private static List<CoinType> types;
     private static HashMap<String, CoinType> idLookup = new HashMap<>();

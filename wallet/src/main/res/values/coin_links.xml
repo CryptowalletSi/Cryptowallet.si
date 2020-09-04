@@ -62,4 +62,15 @@
 		<item>Blockexplorer: https://chainz.cryptoid.info/netko/</item>
 	</string-array>
 
+	<string-array name="ocp_coin">
+		<item>Website: https://netko.tech</item>
+		<item>Forum: https://bitcointalk.org/index.php?topic=1810858</item>
+		<item>Twitter: https://twitter.com/netkocoin</item>
+		<item>Facebook: https://www.facebook.com/NetkoCoin/</item>
+		<item>Telegram: https://t.me/NetkoCoin</item>
+		<item>CoinmarketCap: https://coinmarketcap.com/currencies/netko/</item>
+		<item>Coinpaprika: https://coinpaprika.com/coin/netko-netko/</item>
+		<item>Blockexplorer: https://chainz.cryptoid.info/netko/</item>
+	</string-array>
+
 </resources>

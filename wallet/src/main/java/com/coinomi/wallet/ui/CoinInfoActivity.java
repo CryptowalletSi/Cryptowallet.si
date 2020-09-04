@@ -17,6 +17,7 @@ import com.coinomi.core.coins.LanacoinMain;
 import com.coinomi.core.coins.NetkoMain;
 import com.coinomi.core.coins.NevacoinMain;
 import com.coinomi.core.coins.TajcoinMain;
+import com.coinomi.core.coins.OCProtocolMain;
 import com.coinomi.core.wallet.WalletAccount;
 import com.coinomi.wallet.Constants;
 import com.coinomi.wallet.R;
@@ -73,6 +74,8 @@ public class CoinInfoActivity extends BaseWalletActivity {
             stringArrayId = R.array.taj_coin;
         } else if (coinType instanceof AquariuscoinMain) {
             stringArrayId = R.array.arco_coin;
+        } else if (coinType instanceof OCProtocolMain) {
+            stringArrayId = R.array.ocp_coin;
         }
         addLinks(stringArrayId);
     }

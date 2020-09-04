@@ -10,6 +10,7 @@ import com.coinomi.core.coins.LanacoinMain;
 import com.coinomi.core.coins.NetkoMain;
 import com.coinomi.core.coins.NevacoinMain;
 import com.coinomi.core.coins.TajcoinMain;
+import com.coinomi.core.coins.OCProtocolMain;
 import com.coinomi.core.network.CoinAddress;
 import com.coinomi.stratumj.ServerAddress;
 import com.google.common.collect.ImmutableList;
@@ -99,6 +100,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), R.drawable.aquariuscoin);
         COINS_ICONS.put(CoinID.LANACOIN_MAIN.getCoinType(), R.drawable.lanacoin);
         COINS_ICONS.put(CoinID.TAJCOIN_MAIN.getCoinType(), R.drawable.tajcoin);
+        COINS_ICONS.put(CoinID.OCPROTOCOL_MAIN.getCoinType(), R.drawable.ocprotocol);
 
         COINS_BLOCK_EXPLORERS = new HashMap<>();
         COINS_BLOCK_EXPLORERS.put(CoinID.NEVACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/neva/tx.dws?%s");
@@ -106,6 +108,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/arco/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.LANACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/lana/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.TAJCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/taj/tx.dws?%s");
+        COINS_BLOCK_EXPLORERS.put(CoinID.OCPROTOCOL_MAIN.getCoinType(), "https://chainz.cryptoid.info/ocp/tx.dws?%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -162,6 +165,11 @@ public class Constants {
             addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5108));
             addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5108));
             addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5108));
+        } else if (coinType instanceof OCProtocolMain) {
+            addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5109));
+            addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5109));
+            addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5109));
+            addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5109));
         }
 
         // check for user defined addresses
