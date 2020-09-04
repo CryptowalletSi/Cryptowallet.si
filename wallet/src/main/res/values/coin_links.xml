@@ -3,6 +3,7 @@
 
 	<string-array name="lana_coin">
 		<item>Website: https://lanacoin.com/</item>
+		<item>Website: https://lanacoin.org/</item>
 		<item>Forum: https://bitcointalk.org/index.php?topic=1448065</item>
 		<item>Twitter: https://twitter.com/LanaCoin</item>
 		<item>Facebook: https://www.facebook.com/LanaCoins/</item>
@@ -20,12 +21,13 @@
 	<string-array name="arco_coin">
 		<item>Website: https://aquariuscoin.com</item>
 		<item>Forum: https://bitcointalk.org/index.php?topic=1694341.0</item>
-		<item>Twitter: https://twitter.com/ArcCoin</item>
+		<item>Twitter: https://twitter.com/AquariusARCO</item>
 		<item>Facebook: https://www.facebook.com/aquarius.coin</item>
 		<item>Telegram: https://t.me/AquariusCoin</item>
 		<item>Unified Telegram: https://t.me/BlockmasterSi</item>
 		<item>CoinmarketCap: https://coinmarketcap.com/currencies/aquuariuscoin/</item>
 		<item>Coinpaprika: https://coinpaprika.com/coin/arco-aquariuscoin/</item>
+		<item>CoinGecko: https://coinpaprika.com/coin/arco-aquariuscoin/</item>
 		<item>Blockexplorer: https://chainz.cryptoid.info/arco/</item>
 		<item>Instagram: https://www.instagram.com/aquariuscoin/</item>
 		<item>Reddit: https://www.reddit.com/r/AquariusCoinARCO/</item>
@@ -38,6 +40,9 @@
 		<item>Twitter: https://twitter.com/tajcoin</item>
 		<item>Telegram: https://t.me/TajCoin</item>
 		<item>Unified Telegram: https://t.me/BlockmasterSi</item>
+		<item>CoinmarketCap: https://coinmarketcap.com/currencies/tajcoin/</item>
+		<item>Coinpaprika: https://coinpaprika.com/coin/taj-tajcoin/</item>
+		<item>CoinGecko: https://www.coingecko.com/en/coins/tajcoin</item>
 		<item>Instragram: https://www.instagram.com/tajcoin</item>
 		<item>Reddit: https://www.reddit.com/r/TajCoinCryptoCurrency/</item>
 	</string-array>
@@ -49,6 +54,9 @@
 		<item>Twitter: https://twitter.com/nevacoin</item>
 		<item>Telegram: https://t.me/neva_coin</item>
 		<item>Reddit: https://www.reddit.com/r/NevaCoin/</item>
+		<item>CoinmarketCap: https://coinmarketcap.com/currencies/nevacoin/</item>
+		<item>Coinpaprika: https://coinpaprika.com/coin/neva-nevacoin/</item>
+		<item>CoinGecko: https://www.coingecko.com/en/coins/nevacoin</item>
 	</string-array>
 
 	<string-array name="netko_coin">
@@ -59,6 +67,7 @@
 		<item>Telegram: https://t.me/NetkoCoin</item>
 		<item>CoinmarketCap: https://coinmarketcap.com/currencies/netko/</item>
 		<item>Coinpaprika: https://coinpaprika.com/coin/netko-netko/</item>
+		<item>CoinGecko: https://www.coingecko.com/en/coins/netko</item>
 		<item>Blockexplorer: https://chainz.cryptoid.info/netko/</item>
 	</string-array>
 
