@@ -119,7 +119,8 @@ public class Constants {
             LanacoinMain.get(),
             NevacoinMain.get(),
             NetkoMain.get(),
-            TajcoinMain.get()
+            TajcoinMain.get(),
+            OCProtocolMain.get()
     );
 
     public static List<CoinAddress> getCoinsServerAddresses() {
