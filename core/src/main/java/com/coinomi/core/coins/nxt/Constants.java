@@ -89,7 +89,7 @@ public final class Constants {
     public static final String PARTNERS_URI_NEVA = "https://cryptowallet.si/partner/partner4.json";
     public static final String PARTNERS_URI_NETKO = "https://cryptowallet.si/partner/partner5.json";
     public static final String PARTNERS_URI_TAJ = "https://cryptowallet.si/partner/partner6.json";
-    public static final String PARTNERS_URI_OCP = "https://cryptowallet.si/partner/partner6.json";
+    public static final String PARTNERS_URI_OCP = "https://cryptowallet.si/partner/partner7.json";
 
 
 }
