@@ -457,8 +457,6 @@ This disclaimer was amended for the last time on January 1st, 2016.</string>
     <string name="contact_us_telegram_support">Telegram support:</string>
     <string name="contact_us_aquarius_coin">AquariusCoin: \nhttps://t.me/AquariusCoin</string>
     <string name="contact_us_lana_coin">LanaCoin: \nhttps://t.me/LanaCoin</string>
-    <string name="contact_us_netko_coin">Netko: \nhttps://t.me/NetkoCoin</string>
-    <string name="contact_us_neva_coin">NevaCoin: \nhttps://t.me/neva_coin</string>
     <string name="contact_us_taj_coin">Tajcoin: \nhttps://t.me/TajCoin</string>
     <string name="contact_us_ticket_portal">Ticket portal : \nhttp://support.cryptowallet.si</string>
     <string name="send_amount_balance">Balance: %s</string>

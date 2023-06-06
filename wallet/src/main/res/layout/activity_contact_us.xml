@@ -91,22 +91,6 @@
             style="@style/NormalText"
             android:autoLink="web"
             android:paddingTop="16dp"
-            android:text="@string/contact_us_netko_coin" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
-            android:text="@string/contact_us_neva_coin" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/NormalText"
-            android:autoLink="web"
-            android:paddingTop="16dp"
             android:text="@string/contact_us_taj_coin" />
 
         <TextView

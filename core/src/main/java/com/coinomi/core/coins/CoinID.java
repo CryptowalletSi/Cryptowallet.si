@@ -22,8 +22,6 @@ import java.util.Set;
  * @author John L. Jegutanis
  */
 public enum CoinID {
-    NEVACOIN_MAIN(NevacoinMain.get()),
-    NETKO_MAIN(NetkoMain.get()),
     AQUARIUSCOIN_MAIN(AquariuscoinMain.get()),
     LANACOIN_MAIN(LanacoinMain.get()),
     TAJCOIN_MAIN(TajcoinMain.get()),
