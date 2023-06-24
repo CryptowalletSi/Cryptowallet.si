@@ -10,7 +10,7 @@ android {
         applicationId "com.cryptowallet.si"
         minSdkVersion rootProject.ext.min_sdk
         targetSdkVersion rootProject.ext.target_sdk
-        versionCode 8
+        versionCode 9
         versionName "v2.0.3"
 
         ndk {
@@ -45,6 +45,10 @@ android {
         // Or, if you prefer, you can continue to check for errors in release builds,
         // but continue the build even when errors are found:
         abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'lib/x86_64/darwin/libscrypt.dylib'
     }
 
 
