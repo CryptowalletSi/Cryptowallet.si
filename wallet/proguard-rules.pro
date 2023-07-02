@@ -48,3 +48,6 @@
 -keepclasseswithmembernames class * {
     @butterknife.* <methods>;
 }
+
+-keep class com.coinomi.core.** { *; }
+-keep class com.coinomi.stratumj.** { *; }

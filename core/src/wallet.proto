@@ -329,7 +329,7 @@ message Wallet {
     optional Key seed = 2;
     optional bool seed_password_protected = 7;
 
-    required Key master_key = 3;
+    optional Key master_key = 3;
 
     optional EncryptionType encryption_type = 4 [default = UNENCRYPTED];
     optional ScryptParameters encryption_parameters = 5;

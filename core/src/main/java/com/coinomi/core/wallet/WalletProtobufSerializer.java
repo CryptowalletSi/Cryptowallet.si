@@ -207,17 +207,17 @@ public class WalletProtobufSerializer {
         NxtFamilyWalletProtobufSerializer nxtPocketSerializer = new NxtFamilyWalletProtobufSerializer();
         for (Protos.WalletPocket pocketProto : walletProto.getPocketsList()) {
             CoinType type = getType(pocketProto);
-            AbstractWallet pocket;
-
-            if (type instanceof BitFamily) {
-                pocket = pocketSerializer.readWallet(pocketProto, crypter);
-            } else if (type instanceof NxtFamily) {
-                pocket = nxtPocketSerializer.readWallet(pocketProto, crypter);
-            } else {
-                throw new UnreadableWalletException("Unsupported type " + type);
+            if (type != null) {
+                AbstractWallet pocket;
+                if (type instanceof BitFamily) {
+                    pocket = pocketSerializer.readWallet(pocketProto, crypter);
+                } else if (type instanceof NxtFamily) {
+                    pocket = nxtPocketSerializer.readWallet(pocketProto, crypter);
+                } else {
+                    throw new UnreadableWalletException("Unsupported type " + type);
+                }
+                wallet.addAccount(pocket);
             }
-
-            wallet.addAccount(pocket);
         }
 
         applyWalletUpdates(wallet);
@@ -246,12 +246,11 @@ public class WalletProtobufSerializer {
         }
     }
 
-    private static CoinType getType(Protos.WalletPocket proto) throws UnreadableWalletException {
+    private static CoinType getType(Protos.WalletPocket proto) {
         try {
             return CoinID.typeFromId(proto.getNetworkIdentifier());
         } catch (IllegalArgumentException e) {
-            throw new UnreadableWalletException("Unknown network parameters ID " +
-                    proto.getNetworkIdentifier());
+            return null;
         }
     }
 
