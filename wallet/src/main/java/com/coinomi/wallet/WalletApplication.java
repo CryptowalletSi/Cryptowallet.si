@@ -24,7 +24,6 @@ import com.coinomi.wallet.service.CoinService;
 import com.coinomi.wallet.service.CoinServiceImpl;
 import com.coinomi.wallet.util.Fonts;
 import com.coinomi.wallet.util.LinuxSecureRandom;
-import com.crashlytics.android.Crashlytics;
 import com.google.common.collect.ImmutableList;
 
 import org.acra.ACRA;
@@ -43,8 +42,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.Nullable;
-
-import io.fabric.sdk.android.Fabric;
 
 /**
  * @author John L. Jegutanis
@@ -81,7 +78,6 @@ public class WalletApplication extends Application {
     public void onCreate() {
 //        ACRA.init(this);
         instance = this;
-        Fabric.with(this, new Crashlytics());
         config = new Configuration(PreferenceManager.getDefaultSharedPreferences(this));
 
         new LinuxSecureRandom(); // init proper random number generator

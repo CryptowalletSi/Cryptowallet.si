@@ -47,30 +47,6 @@
 		<item>Reddit: https://www.reddit.com/r/TajCoinCryptoCurrency/</item>
 	</string-array>
 
-	<string-array name="neva_coin">
-		<item>Website: https://nevacoin.net</item>
-		<item>Forum: https://bitcointalk.org/index.php?topic=1388222</item>
-		<item>Facebook: https://www.facebook.com/nevacoin/</item>
-		<item>Twitter: https://twitter.com/nevacoin</item>
-		<item>Telegram: https://t.me/neva_coin</item>
-		<item>Reddit: https://www.reddit.com/r/NevaCoin/</item>
-		<item>CoinmarketCap: https://coinmarketcap.com/currencies/nevacoin/</item>
-		<item>Coinpaprika: https://coinpaprika.com/coin/neva-nevacoin/</item>
-		<item>CoinGecko: https://www.coingecko.com/en/coins/nevacoin</item>
-	</string-array>
-
-	<string-array name="netko_coin">
-		<item>Website: https://netko.tech</item>
-		<item>Forum: https://bitcointalk.org/index.php?topic=1810858</item>
-		<item>Twitter: https://twitter.com/netkocoin</item>
-		<item>Facebook: https://www.facebook.com/NetkoCoin/</item>
-		<item>Telegram: https://t.me/NetkoCoin</item>
-		<item>CoinmarketCap: https://coinmarketcap.com/currencies/netko/</item>
-		<item>Coinpaprika: https://coinpaprika.com/coin/netko-netko/</item>
-		<item>CoinGecko: https://www.coingecko.com/en/coins/netko</item>
-		<item>Blockexplorer: https://chainz.cryptoid.info/netko/</item>
-	</string-array>
-
 	<string-array name="ocp_coin">
 		<item>Website: https://ocprotocol.com</item>
 		<item>Website: https://ocprotocol.net</item>

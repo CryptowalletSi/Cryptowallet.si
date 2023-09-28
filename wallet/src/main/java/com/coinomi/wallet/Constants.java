@@ -7,8 +7,6 @@ import com.coinomi.core.coins.BitcoinMain;
 import com.coinomi.core.coins.CoinID;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.LanacoinMain;
-import com.coinomi.core.coins.NetkoMain;
-import com.coinomi.core.coins.NevacoinMain;
 import com.coinomi.core.coins.TajcoinMain;
 import com.coinomi.core.coins.OCProtocolMain;
 import com.coinomi.core.network.CoinAddress;
@@ -95,16 +93,12 @@ public class Constants {
 
     static {
         COINS_ICONS = new HashMap<>();
-        COINS_ICONS.put(CoinID.NEVACOIN_MAIN.getCoinType(), R.drawable.nevacoin);
-        COINS_ICONS.put(CoinID.NETKO_MAIN.getCoinType(), R.drawable.netko);
         COINS_ICONS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), R.drawable.aquariuscoin);
         COINS_ICONS.put(CoinID.LANACOIN_MAIN.getCoinType(), R.drawable.lanacoin);
         COINS_ICONS.put(CoinID.TAJCOIN_MAIN.getCoinType(), R.drawable.tajcoin);
         COINS_ICONS.put(CoinID.OCPROTOCOL_MAIN.getCoinType(), R.drawable.ocprotocol);
 
         COINS_BLOCK_EXPLORERS = new HashMap<>();
-        COINS_BLOCK_EXPLORERS.put(CoinID.NEVACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/neva/tx.dws?%s");
-        COINS_BLOCK_EXPLORERS.put(CoinID.NETKO_MAIN.getCoinType(), "https://chainz.cryptoid.info/netko/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/arco/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.LANACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/lana/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.TAJCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/taj/tx.dws?%s");
@@ -117,8 +111,6 @@ public class Constants {
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
             AquariuscoinMain.get(),
             LanacoinMain.get(),
-            NevacoinMain.get(),
-            NetkoMain.get(),
             TajcoinMain.get(),
             OCProtocolMain.get()
     );
@@ -141,12 +133,7 @@ public class Constants {
 
     private static CoinAddress getCoinAddress(CoinType coinType, boolean filterEnabled) {
         ArrayList<ServerAddress> addressesForCoin = new ArrayList<>();
-        if (coinType instanceof NevacoinMain) {
-            addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5096));
-            addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5096));
-            addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5096));
-            addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5096));
-        } else if (coinType instanceof LanacoinMain) {
+        if (coinType instanceof LanacoinMain) {
             addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5097));
             addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5097));
             addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5097));
@@ -161,12 +148,7 @@ public class Constants {
             addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5095));
             addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5095));
             addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5095));
-        } else if (coinType instanceof NetkoMain) {
-            addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5108));
-            addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5108));
-            addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5108));
-            addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5108));
-        } else if (coinType instanceof OCProtocolMain) {
+        }else if (coinType instanceof OCProtocolMain) {
             addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5109));
             addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5109));
             addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5109));
