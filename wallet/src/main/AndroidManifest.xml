@@ -237,6 +237,15 @@
             android:label="@string/coin_info_title"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name="com.coinomi.wallet.ui.crypto_water.CryptoWaterActivity"
+            android:label="CryptoWater"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coinomi.wallet.ui.WalletActivity" />
+        </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="989805e4c48446406a77a152b5c1555cc8e85b5d"

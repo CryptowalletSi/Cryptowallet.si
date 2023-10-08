@@ -215,6 +215,8 @@ public class NavigationDrawerFragment extends BaseFragment {
                 case ITEM_OVERVIEW:
                     listener.onOverviewSelected();
                     break;
+                case ITEM_OPEN_QR:
+                    listener.openQRScanner();
             }
         }
     }
@@ -298,5 +300,7 @@ public class NavigationDrawerFragment extends BaseFragment {
     public interface Listener {
         void onAccountSelected(String accountId);
         void onOverviewSelected();
+
+        void openQRScanner();
     }
 }
