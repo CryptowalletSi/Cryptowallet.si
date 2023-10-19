@@ -16,22 +16,25 @@ import com.coinomi.wallet.R;
 import com.coinomi.wallet.tasks.CheckCryptoWaterTask;
 import com.coinomi.wallet.tasks.TasksLoader;
 import com.coinomi.wallet.ui.BaseWalletActivity;
+import com.coinomi.wallet.ui.proof.ProofType;
 import com.coinomi.wallet.util.TimeUtils;
 
-public class CryptoWaterActivity extends BaseWalletActivity {
+public class ProofTypeActivity extends BaseWalletActivity {
 
    private static final String EXTRA_ADDRESS = "extraAddress";
+   private static final String EXTRA_PROOF_TYPE = "extraProofType";
 
-   public static Intent createIntent(Context context, String address) {
-      Intent intent = new Intent(context, CryptoWaterActivity.class);
+   public static Intent createIntent(Context context, String address, ProofType proofType) {
+      Intent intent = new Intent(context, ProofTypeActivity.class);
       intent.putExtra(EXTRA_ADDRESS, address);
+      intent.putExtra(EXTRA_PROOF_TYPE, proofType.name());
       return intent;
    }
 
    @Override
    protected void onCreate(@Nullable Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_crypto_wallet);
+      setContentView(R.layout.activity_proof_type);
 
       TasksLoader.INSTANCE.getCryptoWaterHash(data -> {
          findViewById(R.id.loadingContainer).setVisibility(View.GONE);
@@ -44,6 +47,13 @@ public class CryptoWaterActivity extends BaseWalletActivity {
       }, getExtraAddress());
       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
       getSupportActionBar().setDisplayShowHomeEnabled(false);
+
+      ProofType type = getProofType();
+      if (type == ProofType.SUPPLY_CHAIN) {
+         getSupportActionBar().setTitle("Supply Chain");
+         ((ImageView) findViewById(R.id.proofTypeIcon)).setImageResource(R.drawable.ic_supply_chain);
+         ((TextView) findViewById(R.id.proofTypeTitle)).setText("Supply Chain:");
+      }
    }
 
    private void showData(CheckCryptoWaterTask.CryptoWaterResponse data) {
@@ -82,5 +92,9 @@ public class CryptoWaterActivity extends BaseWalletActivity {
 
    private String getExtraAddress() {
       return getIntent().getStringExtra(EXTRA_ADDRESS);
+   }
+
+   private ProofType getProofType() {
+      return ProofType.valueOf(getIntent().getStringExtra(EXTRA_PROOF_TYPE));
    }
 }

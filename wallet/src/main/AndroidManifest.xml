@@ -261,7 +261,7 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="com.coinomi.wallet.ui.crypto_water.CryptoWaterActivity"
+            android:name="com.coinomi.wallet.ui.crypto_water.ProofTypeActivity"
             android:label="CryptoWater"
             android:theme="@style/AppTheme">
             <meta-data
