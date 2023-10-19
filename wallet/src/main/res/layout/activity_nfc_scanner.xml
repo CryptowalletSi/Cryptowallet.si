@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="16dp">
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.2" />
+
+	<ImageView
+		android:id="@+id/nfcScanImageView"
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:layout_gravity="center"
+		android:padding="5dp"
+		android:src="@drawable/vd_nfc" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:text="Place the device near a NFC Tag in order to proceed. NFC scanning in progress..."
+		style="@style/TransactionRowAmount"
+		android:singleLine="false"
+		android:textAlignment="center"
+		android:gravity="center"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="OR"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp"
+		style="@style/TransactionRowAmount"
+		android:singleLine="false"
+		android:textAlignment="center"
+		android:gravity="center"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Tap on SCAN QR CODE button to proceed:"
+		style="@style/TransactionRowAmount"
+		android:singleLine="false"
+		android:textAlignment="center"
+		android:gravity="center"/>
+
+
+	<Button
+		android:id="@+id/scaQRButton"
+		android:layout_width="150dp"
+		android:layout_height="50dp"
+		android:layout_marginTop="20dp"
+		android:layout_gravity="center"
+		android:text="SCAN QR CODE" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="0.4" />
+
+
+</LinearLayout>

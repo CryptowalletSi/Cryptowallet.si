@@ -65,6 +65,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation fileTree(dir: '../core/libs', include: ['*.jar'])
     implementation project(':core')
+    implementation project(':NFC')
 
     //noinspection GradleCompatible
     implementation "com.android.support:gridlayout-v7:${supportVersion}"

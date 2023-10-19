@@ -533,7 +533,7 @@ public class SendFragment extends WalletFragment {
 
     @OnClick(R.id.scan_qr_code)
     void handleScan() {
-        startActivityForResult(new Intent(getActivity(), ScanActivity.class), REQUEST_CODE_SCAN);
+        startActivityForResult(NFCScannerActivity.createIntent(getActivity()), REQUEST_CODE_SCAN);
     }
 
     @OnClick(R.id.send_confirm)
