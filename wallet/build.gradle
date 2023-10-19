@@ -10,8 +10,8 @@ android {
         applicationId "com.cryptowallet.si"
         minSdkVersion rootProject.ext.min_sdk
         targetSdkVersion rootProject.ext.target_sdk
-        versionCode 10
-        versionName "v2.0.4"
+        versionCode 11
+        versionName "v2.0.5"
 
         ndk {
             abiFilters 'armeabi-v7a', 'x86', 'armeabi', 'x86_64', 'arm64-v8a'
