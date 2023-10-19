@@ -123,6 +123,16 @@ final public class Wallet {
         return sb.toString();
     }
 
+    public static String mnemonicToCountedString(String mnemonic) {
+        String[] mnemonicCounterString = mnemonic.split(" ");
+        List<String> countWords = new ArrayList<>();
+        for (int i = 0; i < mnemonicCounterString.length; i++) {
+            String countWithString = (i + 1) + ": " + mnemonicCounterString[i];
+            countWords.add(countWithString);
+        }
+        return mnemonicToString(countWords);
+    }
+
     static String generateRandomId() {
         byte[] randomIdBytes = new byte[32];
         SecureRandom sr = new SecureRandom();
