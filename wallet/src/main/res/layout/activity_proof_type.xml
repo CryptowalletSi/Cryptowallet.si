@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/coinTitle"
+			style="@style/NormalBoldText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:textSize="20sp"
+			tools:text="LANA" />
+
+		<View
+			android:layout_width="200dp"
+			android:layout_height="1dp"
+			android:layout_marginTop="10dp"
+			android:background="@color/gray_12_dividers" />
+
+		<TextView
+			style="@style/NormalBoldText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:gravity="center"
+			android:text="Address:"
+			android:textAlignment="center" />
+
+
+		<TextView
+			android:id="@+id/coinAddress"
+			style="@style/NormalText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textAlignment="center"
+			tools:text="Lakmdosndoiwdoiw23e2i39d032d" />
+
+		<ImageView
+			android:id="@+id/coinIcon"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginTop="20dp"
+			android:contentDescription="@null"
+			tools:src="@drawable/lanacoin"
+			android:scaleType="fitCenter" />
+
+		<View
+			android:layout_width="200dp"
+			android:layout_height="1dp"
+			android:layout_marginTop="20dp"
+			android:background="@color/gray_12_dividers" />
+		<TextView
+			style="@style/NormalBoldText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:gravity="center"
+			android:text="Balance:"
+			android:textAlignment="center" />
+
+		<TextView
+			android:id="@+id/coinBalance"
+			style="@style/NormalText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			tools:text="75000.00000 LANA:"
+			android:textAlignment="center" />
+
+		<View
+			android:layout_width="200dp"
+			android:layout_height="1dp"
+			android:layout_marginTop="20dp"
+			android:background="@color/gray_12_dividers" />
+
+		<ImageView
+			android:id="@+id/proofTypeIcon"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_marginTop="20dp"
+			android:contentDescription="@null"
+			android:scaleType="fitCenter"
+			android:src="@drawable/crypto_water" />
+
+
+		<TextView
+			android:id="@+id/proofTypeTitle"
+			style="@style/NormalBoldText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:gravity="center"
+			android:text="Water hash:"
+			android:textAlignment="center" />
+
+		<TextView
+			android:id="@+id/hashDate"
+			style="@style/NormalText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			tools:text="2023-07-09 20:34"
+			android:textAlignment="center" />
+
+	</LinearLayout>
+
+	<FrameLayout
+		android:id="@+id/loadingContainer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white">
+
+		<ProgressBar
+			android:id="@+id/progressBar"
+			style="@style/Widget.AppCompat.ProgressBar"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_gravity="center"
+			android:layout_marginStart="@dimen/half_standard_margin"
+			android:layout_marginLeft="@dimen/half_standard_margin"
+			android:layout_marginEnd="@dimen/standard_margin"
+			android:layout_marginRight="@dimen/standard_margin"
+			android:gravity="center" />
+	</FrameLayout>
+
+</FrameLayout>

@@ -32,7 +32,9 @@ import com.coinomi.wallet.R;
 import com.coinomi.wallet.service.CoinService;
 import com.coinomi.wallet.service.CoinServiceImpl;
 import com.coinomi.wallet.tasks.CheckUpdateTask;
+import com.coinomi.wallet.ui.crypto_water.ProofTypeActivity;
 import com.coinomi.wallet.ui.dialogs.TermsOfUseDialog;
+import com.coinomi.wallet.ui.proof.ProofType;
 import com.coinomi.wallet.util.SystemUtils;
 import com.coinomi.wallet.util.WeakHandler;
 
@@ -46,6 +48,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_COIN;
+import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_OPEN_QR;
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_OVERVIEW;
 import static com.coinomi.wallet.ui.NavDrawerItemType.ITEM_SECTION_TITLE;
 
@@ -62,6 +65,8 @@ final public class WalletActivity extends BaseWalletActivity implements
 
 
     private static final int REQUEST_CODE_SCAN = 0;
+    private static final int REQUEST_WATER_HASH_SCAN = 1;
+    private static final int REQUEST_SUPPLY_CHAIN_SCAN = 2;
 
     private static final int TX_BROADCAST_OK = 0;
     private static final int TX_BROADCAST_ERROR = 1;
@@ -221,6 +226,8 @@ final public class WalletActivity extends BaseWalletActivity implements
             NavDrawerItem.addItem(navDrawerItems, ITEM_COIN, account.getDescriptionOrCoinName(),
                     Constants.COINS_ICONS.get(account.getCoinType()), account.getId());
         }
+        NavDrawerItem.addItem(navDrawerItems, ITEM_OPEN_QR, "CryptoWater", R.drawable.crypto_water, ProofType.CRYPTO_WATER_HASH);
+        NavDrawerItem.addItem(navDrawerItems, ITEM_OPEN_QR, "Supply Chain", R.drawable.ic_supply_chain, ProofType.SUPPLY_CHAIN);
     }
 
     @Override
@@ -272,6 +279,11 @@ final public class WalletActivity extends BaseWalletActivity implements
     @Override
     public void onOverviewSelected() {
         openOverview(false);
+    }
+
+    @Override
+    public void openNFCOrQRScanner(ProofType proofType) {
+        openNFCOrQrScannerScreen(proofType);
     }
 
     public void openOverview() {
@@ -433,6 +445,22 @@ final public class WalletActivity extends BaseWalletActivity implements
                     if (resultCode == Activity.RESULT_OK) {
                         try {
                             processInput(intent.getStringExtra(ScanActivity.INTENT_EXTRA_RESULT));
+                        } catch (final Exception e) {
+                            showScanFailedMessage(e);
+                        }
+                    }
+                } else if (requestCode == REQUEST_WATER_HASH_SCAN) {
+                    if (resultCode == Activity.RESULT_OK) {
+                        try {
+                            processProofTypeScan(intent.getStringExtra(ScanActivity.INTENT_EXTRA_RESULT), ProofType.CRYPTO_WATER_HASH);
+                        } catch (final Exception e) {
+                            showScanFailedMessage(e);
+                        }
+                    }
+                } else if (requestCode == REQUEST_SUPPLY_CHAIN_SCAN) {
+                    if (resultCode == Activity.RESULT_OK) {
+                        try {
+                            processProofTypeScan(intent.getStringExtra(ScanActivity.INTENT_EXTRA_RESULT), ProofType.SUPPLY_CHAIN);
                         } catch (final Exception e) {
                             showScanFailedMessage(e);
                         }
@@ -772,6 +800,19 @@ final public class WalletActivity extends BaseWalletActivity implements
     public void onTermsDisagree() {
         getConfiguration().setTermAccepted(false);
         finish();
+    }
+
+    private void openNFCOrQrScannerScreen(ProofType proofType) {
+        int requestCode = REQUEST_WATER_HASH_SCAN;
+        if (proofType == ProofType.SUPPLY_CHAIN) {
+            requestCode = REQUEST_SUPPLY_CHAIN_SCAN;
+        }
+        startActivityForResult(NFCScannerActivity.createIntent(this), requestCode);
+    }
+
+    private void processProofTypeScan(String input, ProofType proofType) {
+        input = input.trim();
+        startActivity(ProofTypeActivity.createIntent(this, input, proofType));
     }
 
     private static class MyHandler extends WeakHandler<WalletActivity> {

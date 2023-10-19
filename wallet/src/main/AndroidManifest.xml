@@ -142,6 +142,29 @@
             android:stateNotNeeded="true"
             android:theme="@style/AppThemeNoTitleBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity android:name=".ui.NFCScannerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:label="Scan NFC or QR code"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coinomi.wallet.ui.WalletActivity" />
+
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/nfc_techlist" />
+        </activity>
         <activity
             android:name="com.coinomi.wallet.ui.AboutActivity"
             android:label="@string/title_activity_about"
@@ -243,6 +266,15 @@
             android:name="com.coinomi.wallet.ui.CoinInfoActivity"
             android:label="@string/coin_info_title"
             android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.coinomi.wallet.ui.crypto_water.ProofTypeActivity"
+            android:label="CryptoWater"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.coinomi.wallet.ui.WalletActivity" />
+        </activity>
 
         <meta-data
             android:name="io.fabric.ApiKey"

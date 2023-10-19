@@ -75,6 +75,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
                     break;
                 case ITEM_COIN:
                 case ITEM_OVERVIEW:
+                case ITEM_OPEN_QR:
                     row = new NavDrawerItemView(context);
                     break;
                 default:
@@ -92,6 +93,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
                 break;
             case ITEM_COIN:
             case ITEM_OVERVIEW:
+            case ITEM_OPEN_QR:
                 ((NavDrawerItemView) row).setData(item.title, item.iconRes);
                 break;
         }

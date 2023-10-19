@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -22,6 +21,7 @@ import android.widget.ListView;
 
 import com.coinomi.wallet.R;
 import com.coinomi.wallet.ui.common.BaseFragment;
+import com.coinomi.wallet.ui.proof.ProofType;
 
 import java.util.List;
 
@@ -215,6 +215,8 @@ public class NavigationDrawerFragment extends BaseFragment {
                 case ITEM_OVERVIEW:
                     listener.onOverviewSelected();
                     break;
+                case ITEM_OPEN_QR:
+                    listener.openNFCOrQRScanner((ProofType) item.itemData);
             }
         }
     }
@@ -298,5 +300,6 @@ public class NavigationDrawerFragment extends BaseFragment {
     public interface Listener {
         void onAccountSelected(String accountId);
         void onOverviewSelected();
+        void openNFCOrQRScanner(ProofType proofType);
     }
 }

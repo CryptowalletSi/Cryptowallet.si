@@ -10,8 +10,8 @@ android {
         applicationId "com.cryptowallet.si"
         minSdkVersion rootProject.ext.min_sdk
         targetSdkVersion rootProject.ext.target_sdk
-        versionCode 9
-        versionName "v2.0.3"
+        versionCode 11
+        versionName "v2.0.5"
 
         ndk {
             abiFilters 'armeabi-v7a', 'x86', 'armeabi', 'x86_64', 'arm64-v8a'
@@ -67,6 +67,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation fileTree(dir: '../core/libs', include: ['*.jar'])
     implementation project(':core')
+    implementation project(':NFC')
 
     //noinspection GradleCompatible
     implementation "com.android.support:gridlayout-v7:${supportVersion}"
