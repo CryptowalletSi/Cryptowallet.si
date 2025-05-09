@@ -20,17 +20,13 @@
 
 - https://github.com/LanaCoin/lanacoin
 - https://github.com/Taj-Coin/tajcoin
-- https://github.com/AquariusNetwork/ARCO
-- https://github.com/OC-CryptoCurrency
 
 ### Privacy policy https://cryptowallet.si/privacy.html
 
 ### Electrum server source code
 
-- https://github.com/AquariusNetwork/electrum-aquariuscoin-server
 - https://github.com/LanaCoin/electrum-lanacoin-server
 - https://github.com/Taj-Coin/electrum-tajcoin-server
-- https://github.com/OC-CryptoCurrency/electrum-ocp-server
 
 ### BIP39 tool for private key extraction from backup seed words
 
