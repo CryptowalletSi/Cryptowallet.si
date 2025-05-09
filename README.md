@@ -34,5 +34,4 @@
 
 - https://github.com/CryptowalletSi/bip39/archive/master.zip
 
-### Addition to the family Telegram on chain tiping bot https://github.com/CryptoBotDev/CryptoWalletSiBot
 
