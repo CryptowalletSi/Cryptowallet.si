@@ -13,9 +13,9 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="3"
+            android:layout_marginTop="32dp"
             android:padding="@dimen/standard_margin"
             android:src="@drawable/logo" />
 
@@ -28,6 +28,20 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/welcome_text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/welcome_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/welcome_description"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
 
         <LinearLayout
             android:layout_width="wrap_content"

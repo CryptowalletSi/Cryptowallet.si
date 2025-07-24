@@ -77,6 +77,17 @@
     <string name="receive">Receive</string>
     <!-- Welcome fragment -->
     <string name="welcome_text">Welcome to CryptoWallet.si wallet</string>
+    <string name="welcome_description">CryptoWallet.si is a self custody open source cryptocurrency wallet with support for
+open source public blockchain ledgers. Currently supported blockchains/coins are
+LanaCoin $LANA and TajCoin $TAJ. Support for other blockchains may or may not be
+done in the future. Developers do not have access to your coins, backup seeds/recovery
+phraze or private keys. User is 100% responsible for safegourding his/her backup
+codes/mnemonic seed word and physical or cybernetic security of his/her mobile
+device. Developer provide in best efford wallet connectivity via two servers for
+broadcasting signed transactions to the blockchain p2p network and wallet account
+balance checks. In case of servers downtime users are free to use the opne source tool
+to export/convert backup seeds to private key for importing into another compatible
+wallet.</string>
     <string name="create_wallet">Create a new wallet</string>
     <string name="restore_wallet">Restore a wallet</string>
     <string name="test_wallet">Test wallet</string>
@@ -90,6 +101,7 @@
     <string name="seed_info">This is your <i>recovery phrase</i>, which is used to generate the keys for your wallet. Please write it down on a paper and keep it in a secure place, as you would with paper money. Anyone with access to it has access to the wallet\'s funds.\nIf you lose your recovery phrase, your wallet cannot be recovered.</string>
     <string name="seed_title">Your recovery phrase</string>
     <string name="seed_regenerate_title">Touch to generate a new recovery phrase</string>
+    <string name="seed_disclaimer">Write down the recovery phrase in exact order with no typing errors. Wrong order or an additional letter in the word = different wallet.</string>
     <string name="backed_up_seed">I have safely stored my recovery phrase</string>
     <!-- Restore fragment -->
     <string name="restore_info">Please enter your recovery phrase:</string>

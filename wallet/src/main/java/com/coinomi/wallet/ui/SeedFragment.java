@@ -3,7 +3,7 @@ package com.coinomi.wallet.ui;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +18,7 @@ import com.coinomi.wallet.Constants;
 import com.coinomi.wallet.R;
 import com.coinomi.wallet.ui.common.BaseFragment;
 import com.coinomi.wallet.util.Fonts;
+import com.coinomi.wallet.util.ScreenshotPreventHelper;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,9 +34,16 @@ public class SeedFragment extends BaseFragment {
     private TextView mnemonicView;
     private String mnemonicString;
 
+    private ScreenshotPreventHelper screenshotPreventHelper;
+
     public SeedFragment() {
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        screenshotPreventHelper = new ScreenshotPreventHelper();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -121,5 +129,18 @@ public class SeedFragment extends BaseFragment {
     public void onDetach() {
         super.onDetach();
         listener = null;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        screenshotPreventHelper.setScreenshotPrevent(getActivity());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        screenshotPreventHelper.removeScreenshotPrevent(getActivity());
+
     }
 }
