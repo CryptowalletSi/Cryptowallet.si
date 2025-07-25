@@ -64,7 +64,8 @@
     <string name="receive">接收</string>
     <!-- Welcome fragment -->
     <string name="welcome_text">欢迎使用CryptoWallet.si钱包</string>
-    <string name="create_wallet">创建新钱包</string>
+	<string name="welcome_description">CryptoWallet.si 是一个自托管的开源加密货币钱包，支持开源公共区块链账本。目前支持的区块链/代币包括 LanaCoin $LANA 和 TajCoin $TAJ。未来可能会或不会支持其他区块链。开发者无法访问您的代币、备份种子/恢复短语或私钥。用户需对其备份代码/助记词以及其移动设备的物理或网络安全负全部责任。开发者通过两台服务器尽最大努力提供钱包连接服务，用于将签名交易广播到区块链 P2P 网络以及查询钱包账户余额。如果服务器宕机，用户可自由使用开源工具将备份种子导出/转换为私钥，并导入到其他兼容钱包中。</string>
+	<string name="create_wallet">创建新钱包</string>
     <string name="restore_wallet">恢复钱包</string>
     <string name="test_wallet">测试钱包</string>
     <!-- Intro -->
@@ -74,6 +75,7 @@
     <string name="seed_info">这是你的<i>恢复种子密码</i>，请将其记录在纸上并妥善保管，请注意任何得到这张纸的人就能够控制相应钱包内的资金。\n如果你丢失这个密码，我们没有办法恢复你的钱包。</string>
     <string name="seed_title">你的种子密码</string>
     <string name="seed_regenerate_title">触屏生成新密码</string>
+    <string name="seed_disclaimer">请准确无误地按顺序写下恢复短语。顺序错误或单词中多一个字母 = 不同的钱包。</string>
     <string name="backed_up_seed">我已经抄下密码并保管在一个安全地方。</string>
     <!-- Restore fragment -->
     <string name="restore_info">请输入你的恢复种子：</string>

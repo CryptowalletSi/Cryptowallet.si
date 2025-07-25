@@ -64,7 +64,8 @@
     <string name="receive">recibir</string>
     <!-- Welcome fragment -->
     <string name="welcome_text">Bienvenido a la billetera CryptoWallet.si</string>
-    <string name="create_wallet">Crear una billetera nueva</string>
+	<string name="welcome_description">CryptoWallet.si es una billetera de criptomonedas de código abierto y autocustodia que admite registros blockchain públicos de código abierto. Actualmente se admiten las blockchains/monedas LanaCoin $LANA y TajCoin $TAJ. El soporte para otras blockchains puede o no estar disponible en el futuro. Los desarrolladores no tienen acceso a tus monedas, semillas de respaldo/frases de recuperación ni claves privadas. El usuario es 100% responsable de proteger sus códigos de respaldo/palabras mnemotécnicas y de la seguridad física o cibernética de su dispositivo móvil. Los desarrolladores proporcionan, con el mayor esfuerzo posible, conectividad a la billetera a través de dos servidores para transmitir transacciones firmadas a la red P2P de blockchain y verificar el saldo de la cuenta. En caso de inactividad de los servidores, los usuarios pueden usar libremente la herramienta de código abierto para exportar/convertir las semillas de respaldo en claves privadas e importarlas en otra billetera compatible.</string>
+	<string name="create_wallet">Crear una billetera nueva</string>
     <string name="restore_wallet">Recuperar una billetera</string>
     <string name="test_wallet">Probar Cartera</string>
     <!-- Intro -->
@@ -74,6 +75,7 @@
     <string name="seed_info">Esta es su<i>frase de recuperación</i>, la que es usada para generar llaves para su billetera. Por favor escribala en un papel y mantengala en un logar seguro, como lo haría con el dinero de papel. Cualquiera con acceso a ella ,tiene acceso a los fondos en la billetera.\nSi usted pierde su frase de recuperación, su billetera no podrá ser recuperada .</string>
     <string name="seed_title">Su frase de recuperación</string>
     <string name="seed_regenerate_title">Toque para generar una nueva frase de recuperación</string>
+    <string name="seed_disclaimer">Escribe la frase de recuperación en el orden exacto, sin errores de escritura. Orden incorrecto o una letra adicional = billetera diferente.</string>
     <string name="backed_up_seed">He guardado de forma segura mi frase de recuperación</string>
     <!-- Restore fragment -->
     <string name="restore_info">Por favor, introduzca su frase de la recuperación:</string>

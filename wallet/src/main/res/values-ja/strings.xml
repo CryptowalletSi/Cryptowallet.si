@@ -64,7 +64,8 @@
     <string name="receive">受け取る</string>
     <!-- Welcome fragment -->
     <string name="welcome_text">CryptoWallet.siウォレットへようこそ</string>
-    <string name="create_wallet">新しいウォレットを作成する</string>
+	<string name="welcome_description">CryptoWallet.si は、自己管理型のオープンソース暗号通貨ウォレットであり、オープンソースのパブリックブロックチェーン台帳をサポートしています。現在サポートされているブロックチェーン/コインは LanaCoin $LANA と TajCoin $TAJ です。他のブロックチェーンへの対応が将来追加される可能性も、されない可能性もあります。開発者はあなたのコイン、バックアップシード／復元フレーズ、秘密鍵にアクセスできません。ユーザーは自身のバックアップコード／助記語とモバイル端末の物理的またはサイバー的な安全を100％責任を持って守る必要があります。開発者は、署名済み取引をブロックチェーンのP2Pネットワークにブロードキャストし、ウォレット残高を確認するために、2つのサーバーによる接続を最大限に提供します。サーバーが停止している場合でも、ユーザーはオープンソースツールを使ってバックアップシードを秘密鍵に変換し、他の互換ウォレットにインポートできます。</string>
+	<string name="create_wallet">新しいウォレットを作成する</string>
     <string name="restore_wallet">ウォレットを復旧する</string>
     <string name="test_wallet">ウォレットをテストする</string>
     <!-- Intro -->
@@ -74,7 +75,8 @@
     <string name="seed_info">これはウォレットの秘密鍵を生成するのに利用される<i>復元フレーズ</i>です。紙に書きとめたうえで、紙幣と同様に安全な場所に保管をしておいてください。この復元フレーズを知ることができる人は誰でもウォレットの残高にアクセスできます。復元フレーズを紛失してしまった場合には、ウォレットの復旧はできなくなります。</string>
     <string name="seed_title">復元フレーズ</string>
     <string name="seed_regenerate_title">タッチして新しい復元フレーズを生成する</string>
-    <string name="backed_up_seed">私は復元フレーズを安全な場所に保管しました</string>
+	<string name="seed_disclaimer">回復フレーズを正確な順番で、タイプミスなしで書き留めてください。順番が違ったり、単語に余分な文字があると別のウォレットになります。</string>
+	<string name="backed_up_seed">私は復元フレーズを安全な場所に保管しました</string>
     <!-- Restore fragment -->
     <string name="restore_info">復元フレーズを入力してください：</string>
     <string name="restore_seed_protected">この復元フレーズにはパスワードがかかっています (BIP39)</string>
