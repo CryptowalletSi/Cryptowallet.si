@@ -2,13 +2,11 @@ package com.coinomi.wallet;
 
 import android.text.format.DateUtils;
 
-import com.coinomi.core.coins.AquariuscoinMain;
 import com.coinomi.core.coins.BitcoinMain;
 import com.coinomi.core.coins.CoinID;
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.LanacoinMain;
 import com.coinomi.core.coins.TajcoinMain;
-import com.coinomi.core.coins.OCProtocolMain;
 import com.coinomi.core.network.CoinAddress;
 import com.coinomi.stratumj.ServerAddress;
 import com.google.common.collect.ImmutableList;
@@ -93,26 +91,20 @@ public class Constants {
 
     static {
         COINS_ICONS = new HashMap<>();
-        COINS_ICONS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), R.drawable.aquariuscoin);
         COINS_ICONS.put(CoinID.LANACOIN_MAIN.getCoinType(), R.drawable.lanacoin);
         COINS_ICONS.put(CoinID.TAJCOIN_MAIN.getCoinType(), R.drawable.tajcoin);
-        COINS_ICONS.put(CoinID.OCPROTOCOL_MAIN.getCoinType(), R.drawable.ocprotocol);
 
         COINS_BLOCK_EXPLORERS = new HashMap<>();
-        COINS_BLOCK_EXPLORERS.put(CoinID.AQUARIUSCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/arco/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.LANACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/lana/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.TAJCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/taj/tx.dws?%s");
-        COINS_BLOCK_EXPLORERS.put(CoinID.OCPROTOCOL_MAIN.getCoinType(), "https://chainz.cryptoid.info/ocp/tx.dws?%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
     public static final List<CoinType> DEFAULT_COINS = ImmutableList.of((CoinType) BitcoinMain.get());
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
-            AquariuscoinMain.get(),
             LanacoinMain.get(),
-            TajcoinMain.get(),
-            OCProtocolMain.get()
+            TajcoinMain.get()
     );
 
     public static List<CoinAddress> getCoinsServerAddresses() {
@@ -143,16 +135,6 @@ public class Constants {
             addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5098));
             addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5098));
             addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5098));
-        } else if (coinType instanceof AquariuscoinMain) {
-            addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5095));
-            addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5095));
-            addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5095));
-            addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5095));
-        }else if (coinType instanceof OCProtocolMain) {
-            addressesForCoin.add(new ServerAddress("node1.cryptowallet.si", 5109));
-            addressesForCoin.add(new ServerAddress("node2.cryptowallet.si", 5109));
-            addressesForCoin.add(new ServerAddress("node3.cryptowallet.si", 5109));
-            addressesForCoin.add(new ServerAddress("node4.cryptowallet.si", 5109));
         }
 
         // check for user defined addresses

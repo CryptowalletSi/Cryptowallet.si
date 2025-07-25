@@ -82,12 +82,9 @@ public final class Constants {
 
     private Constants() {} // never
 
-    // ARCO = json2, LANA = json3,  TAJ = json6
+    // LANA = json3,  TAJ = json6
     public static final String PARTNERS_URI_OVERVIEW = "https://cryptowallet.si/partner/partner1.json";
-    public static final String PARTNERS_URI_ARCO = "https://cryptowallet.si/partner/partner2.json";
     public static final String PARTNERS_URI_LANA = "https://cryptowallet.si/partner/partner3.json";
     public static final String PARTNERS_URI_TAJ = "https://cryptowallet.si/partner/partner6.json";
-    public static final String PARTNERS_URI_OCP = "https://cryptowallet.si/partner/partner7.json";
-
 
 }

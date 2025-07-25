@@ -9,8 +9,4 @@ public class CryptoWaterUtils {
         return address.toLowerCase().startsWith("t");
     }
 
-    public static boolean isARCOCoin(String address) {
-        return address.toLowerCase().startsWith("a");
-    }
-
 }
