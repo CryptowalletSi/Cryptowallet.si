@@ -15,8 +15,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
 import com.coinomi.core.coins.nxt.Constants;
 import com.coinomi.wallet.R;
-import com.coinomi.wallet.tasks.GetPartnersDataTask;
 import com.coinomi.wallet.tasks.HttpRequestsFactory;
+import com.coinomi.wallet.tasks.PartnerData;
 import com.coinomi.wallet.tasks.TasksLoader;
 
 import java.util.List;
@@ -36,7 +36,7 @@ public class BasePartnersDataFragment extends BaseFragment {
     @BindView(R.id.iv_third_partner)
     ImageView thirdPartnerIv;
 
-    private HttpRequestsFactory.Response<List<GetPartnersDataTask.PartnerData>> partnerResponse;
+    private HttpRequestsFactory.Response<List<PartnerData>> partnerResponse;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -51,9 +51,9 @@ public class BasePartnersDataFragment extends BaseFragment {
         partnerResponse = data -> {
             if (data != null && !data.isEmpty()) {
                 try {
-                    GetPartnersDataTask.PartnerData data1 = data.get(0);
-                    GetPartnersDataTask.PartnerData data2 = null;
-                    GetPartnersDataTask.PartnerData data3 = null;
+                    PartnerData data1 = data.get(0);
+                    PartnerData data2 = null;
+                    PartnerData data3 = null;
 
                     if (data.size() > 1) {
                         data2 = data.get(1);
@@ -72,9 +72,9 @@ public class BasePartnersDataFragment extends BaseFragment {
     }
 
     private void loadPartnersImages(
-            GetPartnersDataTask.PartnerData data1,
-            GetPartnersDataTask.PartnerData data2,
-            GetPartnersDataTask.PartnerData data3) {
+            PartnerData data1,
+            PartnerData data2,
+            PartnerData data3) {
         boolean showBothImages = showBothImages();
         if (data1 == null) {
             firstPartnerIv.setVisibility(View.GONE);
@@ -98,9 +98,10 @@ public class BasePartnersDataFragment extends BaseFragment {
             thirdPartnerIv.setVisibility(View.VISIBLE);
             setPartnerData(data3, thirdPartnerIv);
         }
+        Log.e("PARTNER", "End loading " + data1 + ";;" + data2 + ";;" + data3);
     }
 
-    private void setPartnerData(GetPartnersDataTask.PartnerData data, ImageView imageView) {
+    private void setPartnerData(PartnerData data, ImageView imageView) {
         if (data != null) {
             Glide.with(this)
                     .load(data.imageUrl)

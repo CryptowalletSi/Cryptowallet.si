@@ -4,7 +4,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
-public class GetPartnersDataTask extends GenericTask<List<GetPartnersDataTask.PartnerData>> {
+public class GetPartnersDataTask extends GenericTask<List<PartnerData>> {
     private String uri;
 
     public GetPartnersDataTask(HttpRequestsFactory.Response<List<PartnerData>> response, String uri) {
@@ -15,10 +15,5 @@ public class GetPartnersDataTask extends GenericTask<List<GetPartnersDataTask.Pa
     @Override
     protected List<PartnerData> processData() {
         return HttpRequestsFactory.createGetRequest(uri, new TypeToken<List<PartnerData>>(){}.getType());
-    }
-
-    public class PartnerData {
-        public String imageUrl;
-        public String link;
     }
 }

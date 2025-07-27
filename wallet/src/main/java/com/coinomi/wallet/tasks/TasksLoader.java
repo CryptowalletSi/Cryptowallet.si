@@ -5,7 +5,7 @@ import java.util.List;
 public enum TasksLoader {
     INSTANCE;
 
-    public void loadPartnersData(HttpRequestsFactory.Response<List<GetPartnersDataTask.PartnerData>> responseListener, String uri) {
+    public void loadPartnersData(HttpRequestsFactory.Response<List<PartnerData>> responseListener, String uri) {
         new GetPartnersDataTask(responseListener, uri).execute(0);
     }
 

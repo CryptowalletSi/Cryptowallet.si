@@ -20,6 +20,7 @@
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:scaleType="fitXY"
+            android:background="@color/bg_dialog_title"
             coinomi:layout_constraintDimensionRatio="4:2"
             coinomi:layout_constraintEnd_toEndOf="parent"
             coinomi:layout_constraintStart_toStartOf="parent"
@@ -32,10 +33,12 @@
             android:layout_height="0dp"
             android:layout_marginTop="12dp"
             android:scaleType="fitXY"
+            android:background="@color/scan_result_dots"
             coinomi:layout_constraintDimensionRatio="4:2"
             coinomi:layout_constraintEnd_toEndOf="parent"
             coinomi:layout_constraintStart_toStartOf="parent"
             coinomi:layout_constraintTop_toBottomOf="@id/iv_first_partner"
+            coinomi:layout_constraintBottom_toTopOf="@id/iv_third_partner"
             tools:background="@color/accent" />
 
         <ImageView
@@ -44,6 +47,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="12dp"
             android:scaleType="fitXY"
+            android:background="@color/accent"
             coinomi:layout_constraintDimensionRatio="4:2"
             coinomi:layout_constraintEnd_toEndOf="parent"
             coinomi:layout_constraintStart_toStartOf="parent"
