@@ -3,8 +3,9 @@ apply plugin: 'com.google.gms.google-services'
 
 
 android {
-    compileSdkVersion rootProject.ext.target_sdk
-    buildToolsVersion rootProject.ext.build_tools
+    namespace "com.coinomi.wallet"
+
+    compileSdk rootProject.ext.target_sdk
 
     defaultConfig {
         applicationId "com.cryptowallet.si"

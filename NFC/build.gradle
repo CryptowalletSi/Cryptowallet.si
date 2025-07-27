@@ -4,11 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion rootProject.ext.target_sdk
+    namespace "coin.coinomi.nfc"
+
+    compileSdk rootProject.ext.target_sdk
 
     defaultConfig {
-        minSdkVersion rootProject.ext.min_sdk
-        targetSdkVersion rootProject.ext.target_sdk
+        minSdk rootProject.ext.min_sdk
+        targetSdk rootProject.ext.target_sdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
