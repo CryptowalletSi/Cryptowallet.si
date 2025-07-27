@@ -32,6 +32,10 @@ public class BasePartnersDataFragment extends BaseFragment {
     @BindView(R.id.iv_second_partner)
     ImageView secondPartnerIv;
 
+    @Nullable
+    @BindView(R.id.iv_third_partner)
+    ImageView thirdPartnerIv;
+
     private HttpRequestsFactory.Response<List<GetPartnersDataTask.PartnerData>> partnerResponse;
 
     @Override
@@ -48,8 +52,17 @@ public class BasePartnersDataFragment extends BaseFragment {
             if (data != null && !data.isEmpty()) {
                 try {
                     GetPartnersDataTask.PartnerData data1 = data.get(0);
-                    GetPartnersDataTask.PartnerData data2 = data.get(1);
-                    loadPartnersImages(data1, data2);
+                    GetPartnersDataTask.PartnerData data2 = null;
+                    GetPartnersDataTask.PartnerData data3 = null;
+
+                    if (data.size() > 1) {
+                        data2 = data.get(1);
+                    }
+
+                    if (data.size() > 2) {
+                        data3 = data.get(2);
+                    }
+                    loadPartnersImages(data1, data2, data3);
                 } catch (Throwable ignored) {
                     Log.e("PARTNER", "Error loading images: ", ignored);
                 }
@@ -58,7 +71,10 @@ public class BasePartnersDataFragment extends BaseFragment {
         TasksLoader.INSTANCE.loadPartnersData(partnerResponse, getPartnersDataUri());
     }
 
-    private void loadPartnersImages(GetPartnersDataTask.PartnerData data1, GetPartnersDataTask.PartnerData data2) {
+    private void loadPartnersImages(
+            GetPartnersDataTask.PartnerData data1,
+            GetPartnersDataTask.PartnerData data2,
+            GetPartnersDataTask.PartnerData data3) {
         boolean showBothImages = showBothImages();
         if (data1 == null) {
             firstPartnerIv.setVisibility(View.GONE);
@@ -74,6 +90,13 @@ public class BasePartnersDataFragment extends BaseFragment {
         } else {
             secondPartnerIv.setVisibility(View.VISIBLE);
             setPartnerData(data2, secondPartnerIv);
+        }
+
+        if (data3 == null || !showBothImages) {
+            thirdPartnerIv.setVisibility(View.GONE);
+        } else {
+            thirdPartnerIv.setVisibility(View.VISIBLE);
+            setPartnerData(data3, thirdPartnerIv);
         }
     }
 

@@ -30,12 +30,24 @@
             android:id="@+id/iv_second_partner"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             android:scaleType="fitXY"
             coinomi:layout_constraintDimensionRatio="4:2"
             coinomi:layout_constraintEnd_toEndOf="parent"
             coinomi:layout_constraintStart_toStartOf="parent"
             coinomi:layout_constraintTop_toBottomOf="@id/iv_first_partner"
+            tools:background="@color/accent" />
+
+        <ImageView
+            android:id="@+id/iv_third_partner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="fitXY"
+            coinomi:layout_constraintDimensionRatio="4:2"
+            coinomi:layout_constraintEnd_toEndOf="parent"
+            coinomi:layout_constraintStart_toStartOf="parent"
+            coinomi:layout_constraintTop_toBottomOf="@id/iv_second_partner"
             tools:background="@color/accent" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
