@@ -83,7 +83,8 @@
     <string name="restore_skip_title">Παράκαμψη επαλήθευσης</string>
     <string name="restore_skip_info1">Παρακαλώ βεβαιωθείτε ότι η φράση ανάκτησης ταιριάζει με την εξής:</string>
     <string name="restore_skip_info2">Δεν συνίσταται η παράλειψη της επαληθεύσεως, ώστε να εντοπιστούν τυχόν λάθη.</string>
-    <string name="restore_error_checksum">Η φράση ανάκτησης δεν είναι έγκυρη. Παρακαλώ βεβαιωθείτε πως όλες οι λέξεις έχουν αντιγραφεί σωστά.</string>
+	<string name="restore_skip_part_two_info">Είστε σίγουρος ότι έχετε δημιουργήσει αντίγραφο ασφαλείας των λέξεων ανάκτησης;</string>
+	<string name="restore_error_checksum">Η φράση ανάκτησης δεν είναι έγκυρη. Παρακαλώ βεβαιωθείτε πως όλες οι λέξεις έχουν αντιγραφεί σωστά.</string>
     <string name="restore_error_words">Η φράση ανάκτησης εμπεριέχει μη έγκυρες λέξεις.</string>
     <string name="restore_error_mismatch">Η φράση ανάκτησης που εισάγατε δεν ταιριάζει με τη φράση ανάκτησης του πορτοφολιού σας.</string>
     <string name="restore_error">Η φράση ανάκτησής σας δεν μπόρεσε να επαληθευτεί. %1$s</string>

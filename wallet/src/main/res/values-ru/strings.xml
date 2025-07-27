@@ -83,7 +83,8 @@
     <string name="restore_skip_title">Пропустить проверку</string>
     <string name="restore_skip_info1">Пожалуйста удостоверитесь, что Ваша восстанавливающая фраза совпадает с этой :</string>
     <string name="restore_skip_info2">Мы рекомендуем не пропускать проверку, что бы не допустить ошибок.</string>
-    <string name="restore_error_checksum">Не правильная восстанавливающая фраза. Убедитесь в правильности ввода.</string>
+	<string name="restore_skip_part_two_info">Вы уверены, что сохранили свои слова восстановления?</string>
+	<string name="restore_error_checksum">Не правильная восстанавливающая фраза. Убедитесь в правильности ввода.</string>
     <string name="restore_error_words">Восстанавливающая фраза содержит нераспознаваемые слова.</string>
     <string name="restore_error_mismatch">Введенная Вами восстанавливающая фраза не совпадает с восстанавливающей фразой вашего кошелька.</string>
     <string name="restore_error">Не удалось проверить Вашу восстанавливающую фразу. %1$s</string>

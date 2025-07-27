@@ -1,13 +1,9 @@
 package com.coinomi.wallet.ui;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +21,7 @@ import com.coinomi.core.CoreUtils;
 import com.coinomi.wallet.Constants;
 import com.coinomi.wallet.R;
 import com.coinomi.wallet.ui.common.BaseFragment;
+import com.coinomi.wallet.ui.dialogs.SkipDialogFragment;
 import com.coinomi.wallet.util.Fonts;
 import com.coinomi.wallet.util.Keyboard;
 
@@ -184,14 +181,11 @@ public class RestoreFragment extends BaseFragment {
     }
 
     private View.OnClickListener getOnSkipListener() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                log.info("Skipping seed verification.");
-                mnemonicTextView.setText("");
-                SkipDialogFragment skipDialog = SkipDialogFragment.newInstance(seed);
-                skipDialog.show(getFragmentManager(), null);
-            }
+        return v -> {
+            log.info("Skipping seed verification.");
+            mnemonicTextView.setText("");
+            SkipDialogFragment skipDialog = SkipDialogFragment.newInstance(seed);
+            skipDialog.show(getFragmentManager(), null);
         };
     }
 
@@ -238,60 +232,7 @@ public class RestoreFragment extends BaseFragment {
         return isSeedValid;
     }
 
-    public static class SkipDialogFragment extends DialogFragment {
 
-        private WelcomeFragment.Listener mListener;
-
-        public static SkipDialogFragment newInstance(String seed) {
-            SkipDialogFragment newDialog = new SkipDialogFragment();
-            Bundle args = new Bundle();
-            args.putString(Constants.ARG_SEED, seed);
-            newDialog.setArguments(args);
-            return newDialog;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            try {
-                mListener = (WelcomeFragment.Listener) activity;
-            } catch (ClassCastException e) {
-                throw new ClassCastException(activity.toString()
-                        + " must implement WelcomeFragment.OnFragmentInteractionListener");
-            }
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            final String seed = getArguments().getString(Constants.ARG_SEED);
-            // FIXME does not look good with custom dialogs in older Samsungs
-//            View dialogView = getActivity().getLayoutInflater().inflate(R.layout.skip_seed_dialog, null);
-//            TextView seedView = (TextView) dialogView.findViewById(R.id.seed);
-//            seedView.setText(seed);
-
-            String dialogMessage = getResources().getString(R.string.restore_skip_info1) + "\n\n" +
-                    seed + "\n\n" + getResources().getString(R.string.restore_skip_info2);
-            // Use the Builder class for convenient dialog construction
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle(R.string.restore_skip_title)
-//                   .setView(dialogView) FIXME
-                   .setMessage(dialogMessage)
-                   .setPositiveButton(R.string.button_skip, new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           if (mListener != null) mListener.onSeedVerified(getArguments());
-                       }
-                   })
-                   .setNegativeButton(R.string.button_cancel, new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           dismiss();
-                       }
-                   });
-
-            return builder.create();
-        }
-    }
 
     private void setError(TextView errorView, int messageId, Object... formatArgs) {
         setError(errorView, getResources().getString(messageId, formatArgs));

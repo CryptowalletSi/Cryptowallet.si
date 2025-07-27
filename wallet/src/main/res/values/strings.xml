@@ -109,6 +109,7 @@ wallet.</string>
     <string name="restore_skip_title">Skipping verification</string>
     <string name="restore_skip_info1">Please make sure that your recovery phrase matches the following:</string>
     <string name="restore_skip_info2">It is recommended not to skip verification, so that any misspellings could be detected.</string>
+    <string name="restore_skip_part_two_info">Are you sure you have backed up your recovery words?</string>
     <string name="restore_error_checksum">Recovery phrase is not valid. Check if some words are misspelled.</string>
     <string name="restore_error_words">Recovery phrase contains unrecognized words.</string>
     <string name="restore_error_mismatch">Recovery phrase entered does not match your recovery phrase.</string>

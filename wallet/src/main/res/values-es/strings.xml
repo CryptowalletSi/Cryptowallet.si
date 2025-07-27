@@ -83,7 +83,8 @@
     <string name="restore_skip_title">Omitir verificación</string>
     <string name="restore_skip_info1">Por favor, asegúrese de que su frase de recuperación coincida con la siguiente:</string>
     <string name="restore_skip_info2">Se recomienda no saltarse la verificación, por lo que cualquier falta de ortografía se pudiera detectar.</string>
-    <string name="restore_error_checksum">Frase de recuperación no es válido. Compruebe si algunas palabras están mal escritas ..</string>
+	<string name="restore_skip_part_two_info">"¿Estás seguro de haber hecho una copia de seguridad de tus palabras de recuperación?  "</string>
+	<string name="restore_error_checksum">Frase de recuperación no es válido. Compruebe si algunas palabras están mal escritas ..</string>
     <string name="restore_error_words">La frase de recuperación contiene palabras no reconocidas.</string>
     <string name="restore_error_mismatch">La frase de recuperación introducida no coincide con su frase de recuperación.</string>
     <string name="restore_error">No se pudo verificar su frase de recuperación  %1$s</string>

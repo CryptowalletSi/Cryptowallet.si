@@ -83,7 +83,8 @@
     <string name="restore_skip_title">検証のスキップ</string>
     <string name="restore_skip_info1">復元フレーズが以下のものに合致するか確認してください：</string>
     <string name="restore_skip_info2">スペルミスを発見できますので、検証のスキップは推奨されません。</string>
-    <string name="restore_error_checksum">復元フレーズが正しくありません。スペルミスがないかご確認ください。</string>
+	<string name="restore_skip_part_two_info">リカバリーワードをバックアップしましたか？</string>
+	<string name="restore_error_checksum">復元フレーズが正しくありません。スペルミスがないかご確認ください。</string>
     <string name="restore_error_words">復元フレーズに認識できない単語が含まれています。</string>
     <string name="restore_error_mismatch">入力された復元フレーズは、正しい復元フレーズに一致しません。</string>
     <string name="restore_error">復元フレーズの検証に失敗しました。%1$s</string>

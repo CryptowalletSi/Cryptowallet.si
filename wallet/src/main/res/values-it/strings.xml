@@ -83,7 +83,8 @@
     <string name="restore_skip_title">Salta verifica</string>
     <string name="restore_skip_info1">Per favore assicurati che la tua frase di recupero coincida con la seguente:</string>
     <string name="restore_skip_info2">Si raccomanda di non saltare la verifica in modo che eventuali errori di ortografia possono essere individuati.</string>
-    <string name="restore_error_checksum">La frase di recupero non è valida. Per favore controlla eventuali errori di ortografia.</string>
+	<string name="restore_skip_part_two_info">Sei sicuro di aver eseguito il backup delle parole di recupero?</string>
+	<string name="restore_error_checksum">La frase di recupero non è valida. Per favore controlla eventuali errori di ortografia.</string>
     <string name="restore_error_words">La frase di recupero contiene parole non riconosciute.</string>
     <string name="restore_error_mismatch">La frase di recupero inserita non coincide con la tua frase di recupero.</string>
     <string name="restore_error">Non è stato possibile verificare la tua frase di recupero. %1$s</string>
