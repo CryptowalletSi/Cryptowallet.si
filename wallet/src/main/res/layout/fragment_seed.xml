@@ -108,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/seed_disclaimer"
-            style="@style/NormalText"/>
+            style="@style/SmallHelpText"/>
 
         <RelativeLayout
             android:layout_width="match_parent"

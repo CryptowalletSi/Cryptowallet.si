@@ -35,10 +35,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0"
-            android:textSize="16dp"
-            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
             android:paddingHorizontal="16dp"
-            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
             android:text="@string/welcome_description"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
