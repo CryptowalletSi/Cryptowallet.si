@@ -660,10 +660,20 @@ public class SendFragment extends WalletFragment {
     private AddressState processInput(String input) {
         input = input.trim();
         try {
+
+            if (input.contains("?amount=")) {
+                // if amount is empty / not present we set amount to be 0.
+                int indexOfAmount = input.indexOf("?amount=") + "?amount=".length();
+                if (indexOfAmount == input.length()) {
+                    input = input + "0";
+                }
+            }
+
             updateStateFrom(new CoinURI(input));
             return AddressState.OK;
         } catch (final CoinURIParseException x) {
             String error = x.getError();
+            log.error("CoinURIParseException: " + x);
             if (!TextUtils.isEmpty(error) && Constants.ARG_ADDRESS_TYPE_ERROR.equals(error)) {
                 return AddressState.NOT_SAME_TYPE;
             } else {
@@ -688,6 +698,7 @@ public class SendFragment extends WalletFragment {
 //            return;
 //        }
 
+        log.error("CoinUri: " + coinUri.toString());
         setUri(coinUri);
 
         // delay these actions until fragment is resumed
