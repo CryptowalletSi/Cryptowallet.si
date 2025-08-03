@@ -26,6 +26,15 @@
 
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@color/white</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="titleTextStyle">@style/ActionBarStyleTitleText</item>
+    </style>
+
+    <style name="ActionBarStyleTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">24dp</item>
     </style>
 
     <!-- Special Button styles -->
@@ -103,6 +112,7 @@
     <style name="PagerTabStrip" parent="NormalText">
         <item name="android:background">@color/actionbar_bg</item>
         <item name="android:textColor">@color/actionbar_fg</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
     </style>
 
     <!-- Widget amount style -->

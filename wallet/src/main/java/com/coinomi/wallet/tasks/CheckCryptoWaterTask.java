@@ -11,7 +11,6 @@ public class CheckCryptoWaterTask extends GenericTask<CheckCryptoWaterTask.Crypt
 
    public static final String TICKER_LANA = "lana";
    public static final String TICKER_TAJ = "taj";
-   public static final String TICKER_ARCO = "arco";
 
    public CheckCryptoWaterTask(HttpRequestsFactory.Response<CheckCryptoWaterTask.CryptoWaterResponse> response, String address) {
       super(response);
@@ -26,10 +25,6 @@ public class CheckCryptoWaterTask extends GenericTask<CheckCryptoWaterTask.Crypt
    public static String getTickerFromAddress(String address) {
       if (CryptoWaterUtils.isLanaCoin(address)) {
          return TICKER_LANA;
-      }
-
-      if (CryptoWaterUtils.isARCOCoin(address)) {
-         return TICKER_ARCO;
       }
 
       if (CryptoWaterUtils.isTajCoin(address)) {

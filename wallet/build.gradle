@@ -3,15 +3,16 @@ apply plugin: 'com.google.gms.google-services'
 
 
 android {
-    compileSdkVersion rootProject.ext.target_sdk
-    buildToolsVersion rootProject.ext.build_tools
+    namespace "com.coinomi.wallet"
+
+    compileSdk rootProject.ext.target_sdk
 
     defaultConfig {
         applicationId "com.cryptowallet.si"
         minSdkVersion rootProject.ext.min_sdk
         targetSdkVersion rootProject.ext.target_sdk
-        versionCode 11
-        versionName "v2.0.5"
+        versionCode 12
+        versionName "v2.0.6"
 
         ndk {
             abiFilters 'armeabi-v7a', 'x86', 'armeabi', 'x86_64', 'arm64-v8a'
@@ -86,7 +87,7 @@ dependencies {
     implementation 'com.android.support:support-v4-preferencefragment:1.0.0@aar'
     implementation 'com.jakewharton:butterknife:8.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.0.0'
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.13.1'
 
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'

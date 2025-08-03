@@ -64,7 +64,8 @@
     <string name="receive">ricevi</string>
     <!-- Welcome fragment -->
     <string name="welcome_text">Benvenuto nel portafoglio di CryptoWallet.si</string>
-    <string name="create_wallet">Crea un nuovo portafoglio</string>
+	<string name="welcome_description">CryptoWallet.si è un portafoglio di criptovalute open source con custodia autonoma, che supporta registri blockchain pubblici open source. Attualmente sono supportate le blockchain/monete LanaCoin $LANA e TajCoin $TAJ. Il supporto per altre blockchain potrebbe essere aggiunto o meno in futuro. Gli sviluppatori non hanno accesso alle tue monete, frasi di backup/recupero o chiavi private. L\'utente è completamente responsabile della salvaguardia dei propri codici di backup/parole mnemoniche e della sicurezza fisica o informatica del proprio dispositivo mobile. Gli sviluppatori forniscono con il massimo impegno la connettività del portafoglio tramite due server per trasmettere transazioni firmate alla rete P2P della blockchain e per controllare il saldo del portafoglio. In caso di inattività dei server, l\'utente è libero di usare lo strumento open source per esportare/convertire le frasi di backup in chiavi private e importarle in un altro portafoglio compatibile.</string>
+	<string name="create_wallet">Crea un nuovo portafoglio</string>
     <string name="restore_wallet">Ripristina un portafoglio</string>
     <string name="test_wallet">Test portafoglio</string>
     <!-- Intro -->
@@ -74,14 +75,16 @@
     <string name="seed_info">Questa è la tua <i>frase di recupero</i>, usata per generare le chiavi del tuo portafoglio. Per favore scrivila su un foglio e conservalo in un posto sicuro, come faresti con soldi di carta. Chi vi ha accesso può conoscere i fondi del tuo portafoglio.\nSe perdi la tua frase di recupero, il tuo portafoglio non potrà essere recuperato.</string>
     <string name="seed_title">la tua frase di recupero</string>
     <string name="seed_regenerate_title">tocca per generare una nuova frase di recupero</string>
-    <string name="backed_up_seed">Ho conservato in luogo sicuro la mia frase di recupero</string>
+	<string name="seed_disclaimer">Scrivi la frase di recupero nell\'esatto ordine, senza errori di digitazione. Ordine sbagliato o una lettera in più = portafoglio diverso.</string>
+	<string name="backed_up_seed">Ho conservato in luogo sicuro la mia frase di recupero</string>
     <!-- Restore fragment -->
     <string name="restore_info">Per favore scrivi la tua frase di recupero:</string>
     <string name="restore_seed_protected">La mia frase di recupero è protetta (BIP39)</string>
     <string name="restore_skip_title">Salta verifica</string>
     <string name="restore_skip_info1">Per favore assicurati che la tua frase di recupero coincida con la seguente:</string>
     <string name="restore_skip_info2">Si raccomanda di non saltare la verifica in modo che eventuali errori di ortografia possono essere individuati.</string>
-    <string name="restore_error_checksum">La frase di recupero non è valida. Per favore controlla eventuali errori di ortografia.</string>
+	<string name="restore_skip_part_two_info">Sei sicuro di aver eseguito il backup delle parole di recupero?</string>
+	<string name="restore_error_checksum">La frase di recupero non è valida. Per favore controlla eventuali errori di ortografia.</string>
     <string name="restore_error_words">La frase di recupero contiene parole non riconosciute.</string>
     <string name="restore_error_mismatch">La frase di recupero inserita non coincide con la tua frase di recupero.</string>
     <string name="restore_error">Non è stato possibile verificare la tua frase di recupero. %1$s</string>

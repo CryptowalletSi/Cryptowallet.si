@@ -119,4 +119,6 @@
     <!-- Address row -->
     <dimen name="address_row_status_bg_size">22dp</dimen>
     <dimen name="address_row_status_text_size">10sp</dimen>
+
+    <dimen name="font_size_large">18dp</dimen>
 </resources>

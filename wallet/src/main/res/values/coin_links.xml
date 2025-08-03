@@ -18,21 +18,6 @@
 		<item>Reddit: https://www.reddit.com/r/LanaCoin/</item>
 	</string-array>
 
-	<string-array name="arco_coin">
-		<item>Website: https://aquariuscoin.com</item>
-		<item>Forum: https://bitcointalk.org/index.php?topic=1694341.0</item>
-		<item>Twitter: https://twitter.com/AquariusARCO</item>
-		<item>Facebook: https://www.facebook.com/aquarius.coin</item>
-		<item>Telegram: https://t.me/AquariusCoin</item>
-		<item>Unified Telegram: https://t.me/BlockmasterSi</item>
-		<item>CoinmarketCap: https://coinmarketcap.com/currencies/aquuariuscoin/</item>
-		<item>Coinpaprika: https://coinpaprika.com/coin/arco-aquariuscoin/</item>
-		<item>CoinGecko: https://coinpaprika.com/coin/arco-aquariuscoin/</item>
-		<item>Blockexplorer: https://chainz.cryptoid.info/arco/</item>
-		<item>Instagram: https://www.instagram.com/aquariuscoin/</item>
-		<item>Reddit: https://www.reddit.com/r/AquariusCoinARCO/</item>
-	</string-array>
-
 	<string-array name="taj_coin">
 		<item>Website: https://tajcoin.tech</item>
 		<item>Forum: https://bitcointalk.org/index.php?topic=1545060.0;all</item>
@@ -45,24 +30,6 @@
 		<item>CoinGecko: https://www.coingecko.com/en/coins/tajcoin</item>
 		<item>Instragram: https://www.instagram.com/tajcoin</item>
 		<item>Reddit: https://www.reddit.com/r/TajCoinCryptoCurrency/</item>
-	</string-array>
-
-	<string-array name="ocp_coin">
-		<item>Website: https://ocprotocol.com</item>
-		<item>Website: https://ocprotocol.net</item>
-		<item>Website: https://ocprotocol.org</item>
-		<item>Website: https://ocp.cash</item>
-		<item>Website: https://ocp.digital</item>
-		<item>Forum: https://bitcointalk.org/index.php?topic=2313497</item>
-		<item>Twitter: https://twitter.com/OCP_Crypto</item>
-		<item>Facebook: https://www.facebook.com/OCP.OpenSourceCryptocurrency.OC/</item>
-		<item>Telegram: https://t.me/OCProtocol_OCP</item>
-		<item>CoinGecko: https://www.coingecko.com/en/coins/oc-protocol</item>
-		<item>Coinpaprika: https://coinpaprika.com/coin/ocp-oc-protocol/</item>
-		<item>Blockexplorer: https://chainz.cryptoid.info/ocp/</item>
-		<item>Reddit: https://reddit.com/r/OCProtocol</item>
-		<item>SourceCode: https://github.com/OC-CryptoCurrency</item>
-		<item>Discord: https://discord.gg/cVXQNz5</item>
 	</string-array>
 
 </resources>

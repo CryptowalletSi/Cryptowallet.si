@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coinomi.core.coins.AquariuscoinMain;
 import com.coinomi.core.coins.LanacoinMain;
 import com.coinomi.core.coins.TajcoinMain;
 import com.coinomi.wallet.R;
@@ -63,10 +62,6 @@ public class ProofTypeActivity extends BaseWalletActivity {
       switch (ticker) {
          case CheckCryptoWaterTask.TICKER_LANA:
             iconResource = R.drawable.lanacoin;
-            break;
-         case CheckCryptoWaterTask.TICKER_ARCO:
-            iconResource = R.drawable.aquariuscoin;
-            title = AquariuscoinMain.get().getSymbol();
             break;
          case CheckCryptoWaterTask.TICKER_TAJ:
             iconResource = R.drawable.tajcoin;

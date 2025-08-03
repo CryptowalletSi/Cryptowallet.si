@@ -51,3 +51,8 @@
 
 -keep class com.coinomi.core.** { *; }
 -keep class com.coinomi.stratumj.** { *; }
+
+-keepclassmembers class com.coinomi.wallet.tasks.PartnerData {
+    public <init>();
+}
+-keep class com.coinomi.wallet.tasks.PartnerData { *; }

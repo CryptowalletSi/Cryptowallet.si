@@ -4,6 +4,7 @@
         <item name="android:background">@color/actionbar_bg</item>
         <item name="android:textColor">@color/actionbar_fg</item>
         <item name="android:elevation">@dimen/active_elevation</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
     </style>
 
     <style name="TransactionRowDirectionFontIcon" parent="SecondaryText">
