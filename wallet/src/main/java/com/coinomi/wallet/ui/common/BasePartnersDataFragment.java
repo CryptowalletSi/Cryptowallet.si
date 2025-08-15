@@ -3,8 +3,8 @@ package com.coinomi.wallet.ui.common;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -103,7 +103,7 @@ public class BasePartnersDataFragment extends BaseFragment {
 
     private void setPartnerData(PartnerData data, ImageView imageView) {
         if (data != null) {
-            Glide.with(this)
+            Glide.with(this.requireActivity())
                     .load(data.imageUrl)
                     .apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).skipMemoryCache(true))
                     .transition(DrawableTransitionOptions.withCrossFade())
