@@ -856,4 +856,9 @@ final public class WalletActivity extends BaseWalletActivity implements
             }
         }
     }
+
+    @Override
+    protected boolean enableWindowInsets() {
+        return false;
+    }
 }

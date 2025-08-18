@@ -26,4 +26,9 @@ public class AccountDetailsActivity extends BaseWalletActivity implements TradeS
     public void onFinish() {
         finish();
     }
+
+    @Override
+    protected boolean enableWindowInsets() {
+        return false;
+    }
 }
