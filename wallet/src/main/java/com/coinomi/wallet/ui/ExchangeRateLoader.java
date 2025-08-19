@@ -25,9 +25,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.support.v4.content.CursorLoader;
+
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+
+import androidx.loader.content.CursorLoader;
 
 /**
  * @author Andreas Schildbach

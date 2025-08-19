@@ -9,8 +9,8 @@ import com.google.common.collect.Lists;
 import com.google.common.io.Resources;
 
 import org.bitcoinj.core.Address;
-import org.bitcoinj.core.ECKey;
-import org.bitcoinj.core.Sha256Hash;
+import org.bitcoinj.crypto.ECKey;
+import org.bitcoinj.base.Sha256Hash;
 import org.bitcoinj.crypto.ChildNumber;
 import org.bitcoinj.crypto.DeterministicHierarchy;
 import org.bitcoinj.crypto.DeterministicKey;

@@ -1154,7 +1154,7 @@ abstract public class TransactionWatcherWallet extends AbstractWallet<BitTransac
             try {
                 Script script = input.getScriptSig();
                 // TODO check multi sig scripts
-                return isPubKeyMine(script.getPubKey());
+                return isPubKeyMine(script.getPubKeyHash());
             } catch (ScriptException e) {
                 // We didn't understand this input ScriptSig: ignore it.
                 log.debug("Could not parse tx input script: {}", e.toString());

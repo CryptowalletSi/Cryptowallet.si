@@ -1,9 +1,17 @@
 package com.coinomi.wallet.ui;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.wallet.Wallet;
@@ -13,12 +21,19 @@ import com.coinomi.wallet.WalletApplication;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
 
 /**
  * @author John L. Jegutanis
  */
 abstract public class BaseWalletActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        if (enableWindowInsets()) {
+            WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+        }
+        super.onCreate(savedInstanceState);
+    }
 
     public WalletApplication getWalletApplication() {
         return (WalletApplication) getApplication();
@@ -78,6 +93,15 @@ abstract public class BaseWalletActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (enableWindowInsets()) {
+            View root = getWindow().getDecorView().findViewById(android.R.id.content);
+            ; // your root layout id
+            ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
+                Insets sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(sysBars.left, sysBars.top, sysBars.right, sysBars.bottom);
+                return insets;
+            });
+        }
         getWalletApplication().touchLastResume();
     }
 
@@ -85,5 +109,9 @@ abstract public class BaseWalletActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         getWalletApplication().touchLastStop();
+    }
+
+    protected boolean enableWindowInsets() {
+        return true;
     }
 }

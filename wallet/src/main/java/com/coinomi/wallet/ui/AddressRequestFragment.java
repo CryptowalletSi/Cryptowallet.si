@@ -9,10 +9,12 @@ import android.database.Cursor;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.support.v7.view.ActionMode;
+
+import androidx.appcompat.view.ActionMode;
+import androidx.fragment.app.DialogFragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
+
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -191,7 +193,7 @@ public class AddressRequestFragment extends WalletFragment {
     }
 
     @Override
-    public void onViewStateRestored(@android.support.annotation.Nullable Bundle savedInstanceState) {
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         ExchangeRatesProvider.ExchangeRate rate = getRate(getContext(), type.getSymbol(), config.getExchangeCurrencyCode());
         if (rate != null) updateExchangeRate(rate.rate);
         updateView();

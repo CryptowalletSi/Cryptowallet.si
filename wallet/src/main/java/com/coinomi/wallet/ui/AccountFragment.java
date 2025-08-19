@@ -3,11 +3,13 @@ package com.coinomi.wallet.ui;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.view.ActionMode;
+
+import androidx.appcompat.view.ActionMode;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -57,7 +59,8 @@ public class AccountFragment extends BaseFragment {
     private static final int SEND_TO_URI = 0;
 
     private int currentScreen;
-    @BindView(R.id.pager) ViewPager viewPager;
+    @BindView(R.id.pager)
+    ViewPager viewPager;
     NavigationDrawerFragment mNavigationDrawerFragment;
     @Nullable private WalletAccount account;
     private Listener listener;

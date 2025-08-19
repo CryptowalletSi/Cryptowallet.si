@@ -20,4 +20,9 @@ public class TransactionDetailsActivity extends BaseWalletActivity {
 
         }
     }
+
+    @Override
+    protected boolean enableWindowInsets() {
+        return false;
+    }
 }

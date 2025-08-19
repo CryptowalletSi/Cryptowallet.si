@@ -2,8 +2,8 @@ package com.coinomi.wallet.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;

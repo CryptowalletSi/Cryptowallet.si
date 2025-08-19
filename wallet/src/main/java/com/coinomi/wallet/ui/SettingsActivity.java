@@ -22,4 +22,9 @@ public class SettingsActivity extends BaseWalletActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(false);
     }
+
+    @Override
+    protected boolean enableWindowInsets() {
+        return false;
+    }
 }

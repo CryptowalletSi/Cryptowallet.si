@@ -1,17 +1,18 @@
 package com.coinomi.wallet.ui;
 
 import android.os.Bundle;
-import android.support.v4.preference.PreferenceFragment;
+
+import androidx.annotation.Nullable;
+import androidx.preference.PreferenceFragmentCompat;
 
 import com.coinomi.wallet.R;
 
 /**
  * @author John L. Jegutanis
  */
-public class SettingsFragment extends PreferenceFragment {
+public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
-    public void onCreate(Bundle paramBundle) {
-        super.onCreate(paramBundle);
-        addPreferencesFromResource(R.xml.preferences);
+    public void onCreatePreferences(@Nullable Bundle savedInstanceState, @Nullable String rootKey) {
+        setPreferencesFromResource(R.xml.preferences, rootKey);
     }
 }

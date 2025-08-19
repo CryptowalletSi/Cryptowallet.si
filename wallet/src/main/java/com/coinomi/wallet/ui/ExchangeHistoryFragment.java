@@ -5,17 +5,17 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
-import android.support.v4.content.CursorLoader;
-import android.support.v4.content.Loader;
-import android.support.v4.widget.ResourceCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.ResourceCursorAdapter;
 import android.widget.TextView;
+
+import androidx.fragment.app.ListFragment;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
 import com.coinomi.core.coins.CoinType;
 import com.coinomi.wallet.Configuration;
@@ -105,7 +105,7 @@ public final class ExchangeHistoryFragment extends ListFragment {
         startActivity(intent);
     }
 
-    private final LoaderCallbacks<Cursor> exchangesLoaderCallbacks = new LoaderCallbacks<Cursor>() {
+    private final LoaderManager.LoaderCallbacks<Cursor> exchangesLoaderCallbacks = new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override
         public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
             return new CursorLoader(activity, contentUri, null, null, null,
